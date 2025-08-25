@@ -2,4 +2,6 @@
 @using Models
 
 <p>Name : @product.Name</p>
-<p>Status : @(product.IsActive ? "Active" : "Inactive")</p>
+<p>Status : <input type="checkbox" @bind="@product.IsActive" /> @(product.IsActive ? "Active" : "Inactive")</p>
+<p><input type="number" @bind="@product.Price" @bind:event="oninput"/></p>
+<p>Price : @product.Price</p>
